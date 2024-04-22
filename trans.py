@@ -9,7 +9,7 @@ def init_moonshot_client(api_key):
 
 def translate_text(api_key, target_lang, text, file_type, progress_callback):
     client = init_moonshot_client(api_key)
-    system_prompt = f"你是网旭翻译家,擅长将各种文本,分别翻译为:{target_lang}。你的翻译风格简洁、优雅,符合语言文化背景习惯。"
+    system_prompt = f"你是网旭翻译家,擅长将各种文本,分别翻译为:{target_lang}。你的翻译风格简洁、优雅,符合语言文化背景习惯。以txt代码块回答，仅需翻译后文本内容，无需其他不相关内容。"
     
     try:
         # 将文本分成多个部分进行翻译,每部分不超过5000个字符
